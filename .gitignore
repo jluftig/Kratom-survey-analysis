@@ -1,0 +1,5 @@
+# Ignore macOS junk
+.DS_Store
+# Editor folders
+.vscode/
+.idea/
