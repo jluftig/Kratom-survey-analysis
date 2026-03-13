@@ -13,6 +13,17 @@
         .bar-7oh { background: linear-gradient(90deg, #f59e0b, #ef4444); }
         .card-hover { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
         .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+        .stat-num { font-size: 2.25rem; line-height: 1.2; font-weight: 700; color: #059669; margin-bottom: 0.5rem; }
+        .exp-card { background: #ffffff; border-radius: 1.5rem; padding: 2.5rem; border: 1px solid #e2e8f0; margin-bottom: 3rem; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); transition: all 0.2s cubic-bezier(0.4,0,0.2,1); }
+        .exp-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+        .exp-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+        .exp-title { font-size: 1.5rem; font-weight: 700; color: #0f172a; margin: 0; }
+        .exp-subtitle { font-size: 0.875rem; color: #64748b; margin-top: 0.25rem; }
+        .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .exp-stat-item { background: #ecfdf5; border: 1px solid #6ee7b7; border-radius: 1rem; padding: 1.5rem; }
+        .exp-stat-label { font-size: 0.875rem; font-weight: 500; color: #1e293b; }
+        .exp-stat-sub { font-size: 0.75rem; color: #94a3b8; margin-top: 0.5rem; }
+        .exp-footer { border-top: 1px solid #e2e8f0; margin-top: 1.5rem; padding-top: 1.25rem; font-size: 0.875rem; color: #475569; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -166,7 +177,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-4 text-xs italic text-emerald-700">Clinicians frequently note: “actually lower” than traditional fentanyl/heroin OUD patients</div>
+                    <div class="mt-4 text-xs italic text-emerald-700">Clinicians frequently note: "actually lower" than traditional fentanyl/heroin OUD patients</div>
                 </div>
 
                 <!-- 7-OH / Pseudoindoxyl -->
@@ -207,31 +218,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-4 text-xs italic text-orange-700">Clinicians frequently note: “somewhat higher” to “notably higher” (treat like fentanyl-era OUD)</div>
+                    <div class="mt-4 text-xs italic text-orange-700">Clinicians frequently note: "somewhat higher" to "notably higher" (treat like fentanyl-era OUD)</div>
                 </div>
             </div>
             <div class="text-center text-xs text-slate-500 mt-6">
                 Based on clinician reports distinguishing by product type • Higher doses for 7-OH/Pseudo driven by experienced/high-volume providers
             </div>
-        </div>
-
-        <!-- Bup Initiations & Adjuncts -->
-        <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100 card-hover mb-12">
-            <h2 class="text-xl font-semibold mb-6">Bup Initiations &amp; Adjuncts</h2>
-            <ul class="space-y-4 text-sm">
-                <li class="flex gap-4">
-                    <span class="text-emerald-500 text-xl">✔</span>
-                    <div><strong>COWS ≥8</strong> most common threshold (many use clinical judgment)</div>
-                </li>
-                <li class="flex gap-4">
-                    <span class="text-orange-500 text-xl">⚠</span>
-                    <div>A minority of clinicians (22%, 10/45), are seeing occasional precipitated withdrawl — predominantly among higher-volume clinicians performing more bup starts</div>
-                </li>
-                <li class="flex gap-4">
-                    <span class="text-emerald-500 text-xl">✔</span>
-                    <div><strong>Adjuncts nearly universal:</strong> clonidine, ondansetron, hydroxyzine, gabapentin, methocarbamol</div>
-                </li>
-            </ul>
         </div>
 
         <!-- Practice Patterns by Care Setting -->
@@ -240,7 +232,7 @@
                 <i class="fa-solid fa-stethoscope text-violet-600"></i>
                 Bup Initiation Patterns by Care Setting
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm mb-6">
                 <div class="border border-violet-200 rounded-2xl p-6 bg-violet-50">
                     <div class="font-semibold text-violet-800 mb-3">Emergency Department (ED)</div>
                     <div class="space-y-2">
@@ -258,60 +250,55 @@
                     <div class="mt-4 text-xs italic text-violet-700">Potentially lower risk patient population, more connected, accessing ongoing engagement, allows lower dose approach</div>
                 </div>
             </div>
-        </div>
-
-        <!-- Bup Initiation Style by Experience Level (updated) -->
-        <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100 card-hover mb-12">
-            <h2 class="text-xl font-semibold mb-6 flex items-center gap-3">
-                <i class="fa-solid fa-chart-line text-emerald-600"></i>
-                Bup Initiation Style by Experience Level
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
-                <div class="border border-emerald-200 rounded-2xl p-6 bg-emerald-50">
-                    <div class="font-semibold text-emerald-800 mb-3">Less Experienced (1–20 patients)</div>
-                    <div class="space-y-2">
-                        <div class="flex justify-between"><span>Micro / low-dose starts</span><span class="font-medium">37%</span></div>
-                        <div class="flex justify-between"><span>High-dose starts</span><span class="font-medium">20%</span></div>
-                    </div>
+            <div class="border-t border-slate-100 pt-5 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div class="flex items-start gap-3">
+                    <span class="text-emerald-500 text-lg mt-0.5">✔</span>
+                    <div><strong>COWS ≥8</strong> most common initiation threshold — many rely on clinical judgment</div>
                 </div>
-                <div class="border border-emerald-200 rounded-2xl p-6 bg-emerald-50">
-                    <div class="font-semibold text-emerald-800 mb-3">More Experienced (21–100 patients)</div>
-                    <div class="space-y-2">
-                        <div class="flex justify-between"><span>High-dose starts</span><span class="font-medium">60%</span></div>
-                        <div class="flex justify-between"><span>Micro / low-dose starts</span><span class="font-medium">30%</span></div>
-                    </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-emerald-500 text-lg mt-0.5">✔</span>
+                    <div><strong>Adjuncts nearly universal:</strong> clonidine, ondansetron, hydroxyzine, gabapentin, methocarbamol</div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-orange-500 text-lg mt-0.5">⚠</span>
+                    <div><strong>22% (10/45)</strong> report occasional precipitated withdrawal — predominantly among higher-volume clinicians</div>
                 </div>
             </div>
         </div>
 
         <!-- Experience Matters -->
-        <div class="bg-white rounded-3xl p-6 md:p-10 mb-12 border border-slate-100 card-hover">
-            <div class="flex items-center gap-4 mb-8">
-                <i class="fa-solid fa-chart-line text-4xl text-emerald-600"></i>
+        <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100 card-hover mb-12" style="background-color:#ffffff;border-radius:1.5rem;padding:2rem;border:1px solid #e2e8f0;margin-bottom:3rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+            <div class="flex items-center gap-4 mb-6">
+                <i class="fa-solid fa-chart-line text-3xl text-emerald-600"></i>
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900">Experience Matters</h2>
-                    <p class="text-slate-600">High-volume clinicians (21–100 patients, n=10) vs Lower-volume (n=35)</p>
+                    <div class="text-2xl font-bold text-slate-900">Experience Matters</div>
+                    <div class="text-sm text-slate-600 mt-1">High-volume clinicians (21&ndash;100 patients, n=10) vs Lower-volume (n=35)</div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <div class="text-4xl font-semibold text-emerald-600">9/10</div>
-                    <div class="text-sm text-slate-600 mt-1">Recognize 7-OH withdrawal as “notably more severe”</div>
-                    <div class="text-xs text-slate-500 mt-3">vs 19/35 in lower-volume group</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="border border-emerald-200 rounded-2xl p-6 bg-emerald-50">
+                    <div style="font-size:2.25rem;font-weight:700;color:#059669;margin-bottom:0.5rem;">9/10</div>
+                    <div class="text-sm font-medium text-slate-700">Recognize 7-OH withdrawal as &ldquo;notably more severe&rdquo;</div>
+                    <div class="text-xs text-slate-500 mt-2">vs 19/35 in lower-volume group</div>
                 </div>
-                <div>
-                    <div class="text-4xl font-semibold text-emerald-600">6/10</div>
-                    <div class="text-sm text-slate-600 mt-1">Routinely use 24–32+ mg buprenorphine</div>
-                    <div class="text-xs text-slate-500 mt-3">vs 8/35 in lower-volume group</div>
+                <div class="border border-emerald-200 rounded-2xl p-6 bg-emerald-50">
+                    <div style="font-size:2.25rem;font-weight:700;color:#059669;margin-bottom:0.5rem;">6/10</div>
+                    <div class="text-sm font-medium text-slate-700">Routinely use 24&ndash;32+ mg buprenorphine</div>
+                    <div class="text-xs text-slate-500 mt-2">vs 8/35 in lower-volume group</div>
                 </div>
-                <div>
-                    <div class="text-4xl font-semibold text-emerald-600">8/10</div>
-                    <div class="text-sm text-slate-600 mt-1">Use significantly more adjunct meds</div>
-                    <div class="text-xs text-slate-500 mt-3">vs 14/35 in lower-volume group</div>
+                <div class="border border-emerald-200 rounded-2xl p-6 bg-emerald-50">
+                    <div style="font-size:2.25rem;font-weight:700;color:#059669;margin-bottom:0.5rem;">8/10</div>
+                    <div class="text-sm font-medium text-slate-700">Use significantly more adjunct meds</div>
+                    <div class="text-xs text-slate-500 mt-2">vs 14/35 in lower-volume group</div>
+                </div>
+                <div class="border border-emerald-200 rounded-2xl p-6 bg-emerald-50">
+                    <div style="font-size:2.25rem;font-weight:700;color:#059669;margin-bottom:0.5rem;">3&times;</div>
+                    <div class="text-sm font-medium text-slate-700">More likely to use high-dose initiation</div>
+                    <div class="text-xs text-slate-500 mt-2">60% vs 20% in less experienced group</div>
                 </div>
             </div>
-            <div class="mt-8 border-t border-slate-200 pt-6 text-sm text-slate-600">
-                <strong>Key Learning Curve:</strong> Experienced clinicians now treat traditional leaf kratom with standard approaches and concentrated 7-OH/pseudo like fentanyl-era OUD — higher bup doses, more adjuncts.
+            <div class="mt-6 pt-5 text-sm text-slate-600 border-t border-slate-200">
+                <strong>Key Learning Curve:</strong> Experienced clinicians treat traditional leaf kratom with standard approaches and concentrated 7-OH/pseudo like fentanyl-era OUD &mdash; higher bup doses, more adjuncts, higher initiation doses.
             </div>
         </div>
 
@@ -340,26 +327,18 @@
         <!-- Take-Home Messages -->
         <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100 card-hover">
             <h2 class="text-2xl font-semibold mb-6 text-center">Clinical Takeaways</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="space-y-4">
-                    <div class="flex gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">1</div>
-                        <div><strong>Screen aggressively</strong> — kratom/7-OH not on standard UDS. Ask everyone.</div>
-                    </div>
-                    <div class="flex gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">2</div>
-                        <div><strong>Differentiate by product</strong> — leaf product use disorder = treat like mild-moderate OUD; 7-OH use disorder = treat like fentanyl OUD.</div>
-                    </div>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-5 flex gap-3">
+                    <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</div>
+                    <div class="text-sm"><strong>Screen aggressively</strong> — kratom/7-OH not on standard UDS. Ask everyone.</div>
                 </div>
-                <div class="space-y-4">
-                    <div class="flex gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">3</div>
-                        <div><strong>Buprenorphine is first-line</strong> and highly effective.</div>
-                    </div>
-                    <div class="flex gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">4</div>
-                        <div><strong>Buprenorphine overwhelmingly preferred</strong> — Methadone rarely used.</div>
-                    </div>
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-5 flex gap-3">
+                    <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</div>
+                    <div class="text-sm"><strong>Differentiate by product</strong> — leaf = treat like mild-moderate OUD; 7-OH = treat like fentanyl OUD.</div>
+                </div>
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-5 flex gap-3">
+                    <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</div>
+                    <div class="text-sm"><strong>Buprenorphine is first-line, highly effective, and overwhelmingly preferred</strong> — methadone rarely used.</div>
                 </div>
             </div>
         </div>
@@ -410,7 +389,7 @@
                         <i class="fa-solid fa-folder-open text-emerald-600"></i>
                         Prior Work: Direct-to-Inject Bup-XR
                     </div>
-                    <p class="text-xs text-slate-600 leading-relaxed mb-4">Explore our resource collection generated from prior clinician surveys and hackathons on direct-to-inject long-acting injectable buprenorphine (Bup-XR). Resources include a treasure trove of evidence-based practical guidance and algorithms generated from some of the most insightful and innovative clinicians in the field.</p>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">Explore our resource collection generated from prior clinician surveys and hackathons on direct-to-inject long-acting injectable buprenorphine (DTI Bup-XR). Resources include a treasure trove of evidence-based practical guidance and algorithms generated from some of the most insightful and innovative clinicians in the field.</p>
                     <a href="https://drive.google.com/drive/folders/1N2-pD8XU_nbKxZ0s35oxWduw9feP5UR7?usp=sharing" target="_blank" rel="noopener"
                        class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-900 text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition-colors">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
